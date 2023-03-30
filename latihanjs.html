@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #cccccc;
+        }
+
+        .wrap {
+            width: 80%;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+        }
+
+        .rowflex {
+            display: flex;
+        }
+
+        .box {
+            width: 50%;
+            background-color: #eeeeee;
+            padding: 20px;
+        }
+
+        .box:first-child {
+            margin-right: 10px;
+        }
+    </style>
+    <title>Latihan JS</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1 id="titlepage">Latihan JS</h1>
+        <h2 id="subtitle">Hello World</h2>
+        <div class="rowflex">
+            <div class="box box-left">
+                Box kiri
+            </div>
+            <div class="box box-right">
+                Box kanan
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        let number = 10;
+        let q1 = "Saya agak ramah, membuka hati dan saya suka berada bersama-sama dengan orang lain."
+        let q2 = "Saya membutuhkan banyak waktu untuk sendirian dan agak hati-hati untuk memulai hubungan baru."
+
+        let arrQuestions = ["Kalimat pertama", "Kalimat kedua", "kalimat ketiga"];
+
+        let arrQ = [
+            {
+                1: "Saya agak ramah, membuka hati dan saya suka berada bersama-sama dengan orang lain.",
+                2: "Saya membutuhkan banyak waktu untuk sendirian dan agak hati-hati untuk memulai hubungan baru.",
+            },
+            {
+                1: "Saya lebih suka bekerja praktis, menghasilkan hasil yang nyata.",
+                2: "Saya lebih suka bekerja secara teori, mengembangkan ide-ide dan konsep baru.",
+            },
+            {
+                1: "Saya pintar dalam hal analisis dan logika dan ketika saya ragu, saya membiarkan diri saya dipandu oleh otak saya.",
+                2: "Saya sangat sensitif dan emosional dan bila ragu, aku membiarkan diriku dibimbing oleh hati saya.",
+            },
+            {
+                1: "Saya orang yang fleksibel dan spontan, kadang-kadang agak kacau.",
+                2: "Saya orang yang handal dan terorganisir dengan baik. Saya lebih memilih untuk merencanakan masa depan.",
+            }
+        ];
+
+
+        document.querySelector("#titlepage").innerHTML = number;
+        document.querySelector("#subtitle").innerHTML = number;
+        
+        document.querySelector(".box-left").innerHTML = arrQ[3][1];
+        document.querySelector(".box-right").innerHTML = arrQ[3][2];
+    </script>
+</body>
+
+</html>
